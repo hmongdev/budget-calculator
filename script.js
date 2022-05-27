@@ -80,7 +80,8 @@ function remainingBudget() {
         //ensures purchase cannot go below 0
         if (startBudget > 0 && endBudget <= 0) {
             alert("⛔️ Purchase automatically denied. Budget will become negative ⛔️");
-        } else if (startBudget > 0 && endBudget > 0) {
+            return;
+        } else if (endBudget > 0) {
             $('#endBudget').empty().append(endBudget);
             console.log('Remaining budget is: ', endBudget);
             //put endBudget inside the Remaining Budget h2 element
@@ -94,7 +95,9 @@ function showPurchases() {
     //grabbing last item in the purhcases array
     let la = purchases[purchases.length - 1].name;
     let ud = purchases[purchases.length - 1].cost;
+    //show purchases array
+    console.log(`All purchases:`, purchases);
     //adds row and cells WITH the last item
     //adds remove button
-    el.before(`<tr>` + `<td>${la}</td>` + `<td>$${ud} <span><button id="removeButton">Remove</button></span> </td>` + `</tr>`);
+    el.before(`<tr>` + `<td>${la}</td>` + `<td>$${ud} <span><button id="removeButton" disabled>Remove</button></span> </td>` + `</tr>`);
 }

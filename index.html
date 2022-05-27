@@ -12,30 +12,37 @@
 </head>
 
 <body>
-    <h1>Tier 1 Synopsis - Budget Calculator</h1>
+    <div class="container">
+        <h1>Tier 1 Synopsis - Budget Calculator</h1>
 
-    <input id="budgetInput" placeholder="Starting Budget" type="number">
-    <button id="setBudgetButton" type="button">Set Budget</button>
-    <br>
-    <input id="item" placeholder="Item Name" type="text">
-    <span>$</span><input id="cost" placeholder="Item Cost" step=".01" type="number">
-    <button id="addItemButton" type="button">Add Item</button>
+        <input id="budgetInput" placeholder="Starting Budget" type="number">
+        <button id="setBudgetButton" type="button">Set Budget</button>
+        <br>
+        <input id="item" placeholder="Item Name" type="text">
+        <span>$</span><input id="cost" placeholder="Item Cost" step=".01" type="number">
+        <button id="addItemButton" type="button">Add Item</button>
 
-    <h2>List of Purchases</h2>
-    <table>
-        <tr>
-            <th>Item Name</th>
-            <th>Cost</th>
-        </tr>
-        <tr id="itemPurchased" hidden>
-            <td id="purchasedItem"></td>
-            <td id="purchasedCost"></td>
-        </tr>
-        <tr>
-            <td><h2>Remaining Budget:</h2></td>
-            <td><h2>$ <span id="endBudget">0</span> / <span id="startBudget">0</span></h2></h2></td>
-        </tr>
-    </table>
+        <h2>List of Purchases</h2>
+        <table>
+            <tr>
+                <th>Item Name</th>
+                <th>Cost</th>
+            </tr>
+            <tr id="itemPurchased" hidden>
+                <td id="purchasedItem"></td>
+                <td id="purchasedCost"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Remaining Budget:</h2>
+                </td>
+                <td>
+                    <h2>$ <span id="endBudget">0</span> / <span id="startBudget">0</span></h2>
+                    </h2>
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
 
 </html>

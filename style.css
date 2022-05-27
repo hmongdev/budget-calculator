@@ -2,6 +2,13 @@
     outline: none;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 html {
     font-family: 'Muli', sans-serif;
 }

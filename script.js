@@ -61,6 +61,13 @@ function addItem() {
     showPurchases();
 }
 
+function removeItem(){
+    //select item from listOfPurchases
+    //loop thru array
+    //remove from listOfPurchases
+    //refund item.cost to endBudget
+}
+
 function remainingBudget() {
     //1. create a variable that will keep track of sum of purchases
     let sumItemCosts = 0;
@@ -88,5 +95,6 @@ function showPurchases() {
     let la = purchases[purchases.length - 1].name;
     let ud = purchases[purchases.length - 1].cost;
     //adds row and cells WITH the last item
-    el.before(`<tr>` + `<td>${la}</td>` + `<td>$${ud}</td>` + `</tr>`);
+    //adds remove button
+    el.before(`<tr>` + `<td>${la}</td>` + `<td>$${ud} <span><button id="removeButton">Remove</button></span> </td>` + `</tr>`);
 }

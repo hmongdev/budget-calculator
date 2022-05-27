@@ -1,0 +1,27 @@
+*:focus {
+    outline: none;
+}
+
+html {
+    font-family: 'Muli', sans-serif;
+}
+
+input {
+    margin: 0.5rem;
+}
+
+th,
+tr,
+td {
+    border: 2px solid gray;
+    min-width: 200px;
+    min-height: 100px;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+table {
+    border: 5px inset gray;
+    width: 300px;
+    border-collapse: collapse;
+}

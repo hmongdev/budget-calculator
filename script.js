@@ -15,7 +15,7 @@ let purchases = [];
 
 function setBudget() {
     //grab value of budget input
-    startBudget = $('#budgetInput').val();
+    let startBudget = $('#budgetInput').val();
     //make sure input is filled
     if (startBudget === '' || startBudget === 0 || startBudget === undefined) {
         alert('Enter a starting budget');
@@ -43,11 +43,15 @@ function addItem() {
         name: $('#item').val(), //string
         cost: Number($('#cost').val()) //number
     }
-
-    //2. check that inputs are not empty
-    if (newItem.name === '' || newItem.cost <= 0 || startBudget === '' || startBudget === 0 || startBudget === undefined) {
+    console.log(newItem);
+    console.log(startBudget);
+    //2. check that name AND cost are filled
+    if (newItem.name === '' || newItem.cost <= 0) {
         alert('Please fill out \'Starting Budget\', \'Item Name\', and \'Cost\'');
         return
+        //check that starting budget is greater than 0 and filled
+    } else if (startBudget === '' || startBudget === 0 || startBudget === undefined) {
+        alert('Starting budget cannot be empty AND must be greater than 0.');
     } else {
         //2. push object into array purchases
         purchases.push(newItem);
@@ -61,7 +65,7 @@ function addItem() {
     showPurchases();
 }
 
-function removeItem(){
+function removeItem() {
     //select item from listOfPurchases
     //loop thru array
     //remove from listOfPurchases
